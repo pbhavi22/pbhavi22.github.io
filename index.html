@@ -46,7 +46,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start; /* pushes content upward */
+            justify-content: flex-start;
             padding-top: 20px;
         }
 
@@ -55,7 +55,7 @@
             text-decoration: none;
         }
 
-        /* NEON TITLE */
+        /* TITLE DEFAULT (WHITE NEON) */
         .title {
             margin-top: 10px;
             font-size: 72px;
@@ -64,11 +64,21 @@
             color: white;
             cursor: pointer;
 
-      
-            transition: transform 0.3s ease;
+            text-shadow:
+                0 0 5px #ffffff,
+                0 0 10px #ffffff,
+                0 0 20px #ffffff,
+                0 0 40px #cccccc,
+                0 0 80px #aaaaaa;
+
+            transition: all 0.3s ease;
         }
 
+        /* TITLE HOVER (TURQUOISE GLOW) */
         .title:hover {
+            color: #09423d;
+
+          
             transform: scale(1.05);
         }
 
@@ -92,12 +102,11 @@
 
         .icon-grid img {
             width: 180px;
-            transition: transform 0.3s ease, filter 0.3s ease;
+            transition: transform 0.3s ease;
         }
 
         .icon-grid img:hover {
-            transform: scale(1.2);
-            filter: drop-shadow(0 0 20px white);
+            transform: scale(1.15) rotate(-8deg);
         }
 
     </style>
