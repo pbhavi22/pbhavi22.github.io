@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Priya Bhavikatti</title>
 
-    <!-- Blackletter Google Font -->
+    <!-- Blackletter Font -->
     <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
 
     <style>
@@ -12,7 +12,7 @@
             margin: 0;
             display: flex;
             height: 100vh;
-            font-family: Old Style, sans-serif;
+            font-family: sans-serif;
             color: white;
         }
 
@@ -34,15 +34,11 @@
             bottom: 20px;
             left: 20px;
             color: black;
-            font-family: Old Style, cursive;
-            font-size: 22px;
-            padding: 8px 14px;
-            border-radius: 12px;
+            font-size: 18px;
         }
 
         .right {
             width: 50%;
-            position: relative;
             background-color: black;
             display: flex;
             flex-direction: column;
@@ -56,21 +52,28 @@
             letter-spacing: 2px;
         }
 
-        .grid {
+        .icon-grid {
             margin-top: 60px;
             display: grid;
             grid-template-columns: repeat(3, 120px);
-            grid-template-rows: repeat(3, 120px);
-            gap: 20px;
+            gap: 30px;
         }
 
-        .tile {
-            background-color: white;
-            width: 120px;
-            height: 120px;
-            font-family: Old Style, cursive;
+        .icon-grid a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
         }
 
+        .icon-grid img {
+            width: 100px;
+            transition: transform 0.3s ease;
+        }
+
+        .icon-grid img:hover {
+            transform: scale(1.3) rotate(5deg);
+        }
     </style>
 </head>
 
@@ -84,16 +87,45 @@
     <div class="right">
         <div class="title">priya's place</div>
 
-        <div class="grid">
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
+        <div class="icon-grid">
+            <!-- Football (Your CodePen) -->
+            <a href="https://codepen.io/Priya-Bhavikatti/pen/vEKMyoR" target="_blank">
+                <img src="https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif" alt="Football">
+            </a>
+
+            <!-- Book (Your CodePen) -->
+            <a href="https://codepen.io/Priya-Bhavikatti/pen/dPXLvPr" target="_blank">
+                <img src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" alt="Books">
+            </a>
+
+            <!-- Other Icon Ideas (placeholders) -->
+            <a href="YOUR-TRAVEL-LINK" target="_blank">
+                <img src="YOUR-TRAVEL-ICON-URL" alt="Travel">
+            </a>
+
+            <a href="YOUR-MUSIC-LINK" target="_blank">
+                <img src="YOUR-MUSIC-ICON-URL" alt="Music">
+            </a>
+
+            <a href="YOUR-CODING-LINK" target="_blank">
+                <img src="YOUR-CODING-ICON-URL" alt="Coding">
+            </a>
+
+            <a href="YOUR-ART-LINK" target="_blank">
+                <img src="YOUR-ART-ICON-URL" alt="Art">
+            </a>
+
+            <a href="YOUR-GAMING-LINK" target="_blank">
+                <img src="YOUR-GAME-ICON-URL" alt="Gaming">
+            </a>
+
+            <a href="YOUR-NATURE-LINK" target="_blank">
+                <img src="YOUR-NATURE-ICON-URL" alt="Nature">
+            </a>
+
+            <a href="YOUR-COOKING-LINK" target="_blank">
+                <img src="YOUR-COOKING-ICON-URL" alt="Cooking">
+            </a>
         </div>
     </div>
 
