@@ -106,31 +106,52 @@
     display: inline-block;
 }
 
-/* HIDDEN TEXT BUBBLE */
+/* SPEECH BUBBLE */
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 260px;
-    background-color: #09423d;
-    color: white;
+    width: 300px;
+    background-color: white;
+    color: #09423d;
     text-align: center;
-    padding: 12px;
-    border-radius: 10px;
-    font-size: 16px;
+    padding: 18px;
+    border-radius: 20px;
+    font-size: 17px;
+    font-family: sans-serif;
+    font-weight: 500;
+
+    border: 3px solid #09423d; /* green outline */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 
     position: absolute;
-    left: -280px;  /* moves bubble to left */
+
+    /* THIS pushes it far left toward middle of screen */
+    left: -400px;  
     top: 50%;
     transform: translateY(-50%);
 
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-/* SHOW ON HOVER */
+/* Bubble Arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -18px;
+    transform: translateY(-50%);
+
+    border-width: 12px;
+    border-style: solid;
+    border-color: transparent transparent transparent #09423d;
+}
+
+/* Show on hover */
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
 }
+
 
     </style>
 </head>
@@ -154,10 +175,11 @@
         <div class="icon-grid">
 
             <!-- Football -->
-            <a href="https://codepen.io/Priya-Bhavikatti/pen/vEKMyoR" target="_blank" class="tooltip">
+    <a href="https://codepen.io/Priya-Bhavikatti/pen/vEKMyoR" target="_blank" class="tooltip">
     <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXkzajUzZGxxMHJpbGlwbjBrbG15YXZkYnhqZGh4bXFoenVhYzBncyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oSlhERxMw751C/giphy.gif" alt="Football">
     <span class="tooltiptext">I am addicted to watching any and all football highlights</span>
 </a>
+
 
 
             <!-- Book -->
