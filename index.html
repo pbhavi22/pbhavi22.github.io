@@ -139,10 +139,10 @@
         <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmEyajVmeHpvN2V2bjQ1emN0Y3FyaThqYjFwOTB0YnBpZWQ5cmx4eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xTiN0khPhxrJgyRc6A/giphy.gif" alt="Music Playlist">
     </a>
 
-    <!-- Sleeping -->
-    <a href="">
-        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTcydGVxNjZtMzZvcnBnbmFjdnJ2NWd4MmNzMjY3M21tZHF2Z2MxZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oriNOXSUFzIEEu6R2/giphy.gif" alt="Sleeping">
-    </a>
+  <!-- Sleeping -->
+<a href="#" onclick="sleepCheck(); return false;">
+    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTcydGVxNjZtMzZvcnBnbmFjdnJ2NWd4MmNzMjY3M21tZHF2Z2MxZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oriNOXSUFzIEEu6R2/giphy.gif" alt="Sleeping">
+</a>
 
     <!-- Placeholder 2 -->
     <a href="#"><img src="YOUR-ICON-4" alt=""></a>
@@ -161,5 +161,32 @@
         </div>
     </div>
 
+<script>
+function sleepCheck() {
+    let hours = prompt("How many hours of sleep did you get last night?");
+
+    if (hours === null) return;
+
+    hours = Number(hours);
+
+    if (isNaN(hours)) {
+        alert("Be serious... enter a number 😭");
+        return;
+    }
+
+    if (hours >= 0 && hours <= 6) {
+        alert("Ok girl sleep better tn");
+    } 
+    else if (hours >= 7 && hours <= 8) {
+        alert("Okkk that's decent");
+    } 
+    else if (hours > 8) {
+        alert("purrr good");
+    } 
+    else {
+        alert("That is not possible 😭");
+    }
+}
+</script>
 </body>
 </html>
