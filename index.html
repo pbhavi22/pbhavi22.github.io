@@ -14,8 +14,10 @@
             height: 100vh;
             font-family: sans-serif;
             color: white;
+            background-color: black;
         }
 
+        /* LEFT SIDE */
         .left {
             width: 50%;
             height: 100%;
@@ -29,108 +31,85 @@
             object-fit: cover;
         }
 
-       .credit {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: black;
-    font-family: 'Dancing Script', cursive;
-    font-size: 22px;
-}
+        .credit {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            font-family: cursive;
+            font-size: 20px;
+        }
 
-       .right {
-    width: 50%;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; /* centers grid vertically */
-}
+        /* RIGHT SIDE */
+        .right {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
+        /* NEON TITLE */
+        .title {
+            margin-top: 40px;
+            font-size: 72px;
+            font-family: 'UnifrakturCook', cursive;
+            letter-spacing: 3px;
+            color: white;
 
-     .title {
-    margin-top: 40px;
-    font-size: 72px;
-    font-family: 'UnifrakturCook', cursive;
-    letter-spacing: 3px;
-    color: #ff4da6;
+            text-shadow:
+                0 0 5px #ffffff,
+                0 0 10px #ffffff,
+                0 0 20px #ffffff,
+                0 0 40px #cccccc,
+                0 0 80px #aaaaaa;
+        }
 
-    text-shadow:
-        0 0 5px #ff4da6,
-        0 0 10px #ff4da6,
-        0 0 20px #ff1a8c,
-        0 0 40px #ff1a8c,
-        0 0 80px #ff1a8c;
-}
-
-  .icon-grid {
-    width: 100%;
-    height: 80vh;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    padding: 40px;
-    position: relative;
-}
-
-        .icon-grid::before {
-    content: "";
-    position: absolute;
-    top: 33%;
-    left: 5%;
-    width: 90%;
-    height: 10px;
-    background: linear-gradient(to right, #5c3a1e, #8b5a2b);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-}
-
-.icon-grid::after {
-    content: "";
-    position: absolute;
-    top: 66%;
-    left: 5%;
-    width: 90%;
-    height: 10px;
-    background: linear-gradient(to right, #5c3a1e, #8b5a2b);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-}
-
-
+        /* ICON GRID */
+        .icon-grid {
+            flex: 1;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            padding: 40px;
+            gap: 40px;
+            justify-items: center;
+            align-items: center;
+        }
 
         .icon-grid a {
             display: flex;
             justify-content: center;
             align-items: center;
-            text-decoration: none;
         }
 
-.icon-grid img {
-    width: 140px;
-    align-self: end; /* pushes icons to bottom of grid cell */
-    transition: transform 0.3s ease;
-}
+        .icon-grid img {
+            width: 180px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
 
-
-
-      .icon-grid img:hover {
-    transform: scale(1.2);
-    filter: drop-shadow(0 0 15px #ff4da6);
-}
+        .icon-grid img:hover {
+            transform: scale(1.2);
+            filter: drop-shadow(0 0 20px white);
+        }
 
     </style>
 </head>
 
 <body>
 
+    <!-- LEFT SIDE -->
     <div class="left">
         <img src="https://github.com/user-attachments/assets/fb1bbf2f-24a6-4665-a752-0644968564f9" alt="Priya">
         <div class="credit">Image credit: @artsultanov_ on Instagram</div>
     </div>
 
+    <!-- RIGHT SIDE -->
     <div class="right">
         <div class="title">priya's place</div>
 
         <div class="icon-grid">
+
             <!-- Football -->
             <a href="https://codepen.io/Priya-Bhavikatti/pen/vEKMyoR" target="_blank">
                 <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXkzajUzZGxxMHJpbGlwbjBrbG15YXZkYnhqZGh4bXFoenVhYzBncyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oSlhERxMw751C/giphy.gif" alt="Football">
@@ -141,34 +120,15 @@
                 <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExajFjZndlZHA1emYxcGtyZzMxajNzOHZlbDNubzlibnFmeHgwa2tpOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/A1oBMukTqFfkoY1HiH/giphy.gif" alt="Books">
             </a>
 
-            <!-- Other Icon Ideas (placeholders) -->
-            <a href="YOUR-TRAVEL-LINK" target="_blank">
-                <img src="YOUR-TRAVEL-ICON-URL" alt="Travel">
-            </a>
+            <!-- Placeholders -->
+            <a href="#"><img src="YOUR-ICON-1" alt=""></a>
+            <a href="#"><img src="YOUR-ICON-2" alt=""></a>
+            <a href="#"><img src="YOUR-ICON-3" alt=""></a>
+            <a href="#"><img src="YOUR-ICON-4" alt=""></a>
+            <a href="#"><img src="YOUR-ICON-5" alt=""></a>
+            <a href="#"><img src="YOUR-ICON-6" alt=""></a>
+            <a href="#"><img src="YOUR-ICON-7" alt=""></a>
 
-            <a href="YOUR-MUSIC-LINK" target="_blank">
-                <img src="YOUR-MUSIC-ICON-URL" alt="Music">
-            </a>
-
-            <a href="YOUR-CODING-LINK" target="_blank">
-                <img src="YOUR-CODING-ICON-URL" alt="Coding">
-            </a>
-
-            <a href="YOUR-ART-LINK" target="_blank">
-                <img src="YOUR-ART-ICON-URL" alt="Art">
-            </a>
-
-            <a href="YOUR-GAMING-LINK" target="_blank">
-                <img src="YOUR-GAME-ICON-URL" alt="Gaming">
-            </a>
-
-            <a href="YOUR-NATURE-LINK" target="_blank">
-                <img src="YOUR-NATURE-ICON-URL" alt="Nature">
-            </a>
-
-            <a href="YOUR-COOKING-LINK" target="_blank">
-                <img src="YOUR-COOKING-ICON-URL" alt="Cooking">
-            </a>
         </div>
     </div>
 
