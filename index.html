@@ -100,6 +100,37 @@
         .icon-grid img:hover {
             transform: scale(1.15) rotate(-8deg);
         }
+/* TOOLTIP WRAPPER */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* HIDDEN TEXT BUBBLE */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 260px;
+    background-color: #09423d;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+
+    position: absolute;
+    left: -280px;  /* moves bubble to left */
+    top: 50%;
+    transform: translateY(-50%);
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* SHOW ON HOVER */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
 
     </style>
 </head>
@@ -123,9 +154,11 @@
         <div class="icon-grid">
 
             <!-- Football -->
-            <a href="https://codepen.io/Priya-Bhavikatti/pen/vEKMyoR" target="_blank">
-                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXkzajUzZGxxMHJpbGlwbjBrbG15YXZkYnhqZGh4bXFoenVhYzBncyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oSlhERxMw751C/giphy.gif" alt="Football">
-            </a>
+            <a href="https://codepen.io/Priya-Bhavikatti/pen/vEKMyoR" target="_blank" class="tooltip">
+    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXkzajUzZGxxMHJpbGlwbjBrbG15YXZkYnhqZGh4bXFoenVhYzBncyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oSlhERxMw751C/giphy.gif" alt="Football">
+    <span class="tooltiptext">I am addicted to watching any and all football highlights</span>
+</a>
+
 
             <!-- Book -->
             <a href="https://codepen.io/Priya-Bhavikatti/pen/dPXLvPr" target="_blank">
