@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Priya Bhavikatti</title>
 
-    <!-- Fancy Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Pacifico&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -29,30 +29,40 @@
             object-fit: cover;
         }
 
-       .credit {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: white;
-    font-family: 'Dancing Script', cursive;
-    font-size: 22px;
-    background: black;   
-    padding: 8px 14px;
-    border-radius: 12px;
-}
-
+        .credit {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            font-family: 'Dancing Script', cursive;
+            font-size: 22px;
+            background: black;
+            padding: 8px 14px;
+            border-radius: 12px;
+        }
 
         .right {
             width: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            position: relative;
             background-color: black;
         }
 
-        h1 {
+        .title {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            font-family: 'Pacifico', cursive;
             font-size: 48px;
+            color: white;
+            animation: floatText 4s ease-in-out infinite;
         }
+
+        @keyframes floatText {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
     </style>
 </head>
 
@@ -64,7 +74,7 @@
     </div>
 
     <div class="right">
-        <h1>Hi, I’m Priya!</h1>
+        <div class="title">priya’s perfect place</div>
     </div>
 
 </body>
