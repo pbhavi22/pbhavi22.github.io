@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Priya Bhavikatti</title>
 
+    <!-- Fancy Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+
     <style>
         body {
             margin: 0;
@@ -15,6 +18,7 @@
         .left {
             width: 50%;
             height: 100%;
+            position: relative;
             overflow: hidden;
         }
 
@@ -25,18 +29,35 @@
             animation: float 4s ease-in-out infinite;
         }
 
+        .credit {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            font-family: 'Dancing Script', cursive;
+            font-size: 22px;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 8px 14px;
+            border-radius: 12px;
+        }
+
         .right {
             width: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: black;
+            background-color: white;
         }
 
         h1 {
             font-size: 48px;
         }
 
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
     </style>
 </head>
 
@@ -44,6 +65,7 @@
 
     <div class="left">
         <img src="https://github.com/user-attachments/assets/fb1bbf2f-24a6-4665-a752-0644968564f9" alt="Priya">
+        <div class="credit">Image credit: @artsultanov_ on Instagram</div>
     </div>
 
     <div class="right">
