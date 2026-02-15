@@ -38,13 +38,15 @@
     font-size: 22px;
 }
 
-        .right {
-            width: 50%;
-            background-color: black;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+       .right {
+    width: 50%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* centers grid vertically */
+}
+
 
         .title {
             margin-top: 40px;
@@ -53,12 +55,16 @@
             letter-spacing: 2px;
         }
 
-        .icon-grid {
-            margin-top: 60px;
-            display: grid;
-            grid-template-columns: repeat(3, 120px);
-            gap: 30px;
-        }
+    .icon-grid {
+    width: 100%;
+    height: 80vh; /* fills most of right side */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 40px;
+    padding: 40px;
+}
+
 
         .icon-grid a {
             display: flex;
@@ -67,10 +73,12 @@
             text-decoration: none;
         }
 
-        .icon-grid img {
-            width: 100px;
-            transition: transform 0.3s ease;
-        }
+      .icon-grid img {
+    width: 100%;
+    max-width: 180px; /* controls how large each icon can grow */
+    transition: transform 0.3s ease;
+}
+
 
         .icon-grid img:hover {
             transform: scale(1.3) rotate(5deg);
