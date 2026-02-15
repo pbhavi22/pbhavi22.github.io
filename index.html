@@ -1,204 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Priya Bhavikatti</title>
+    <meta charset="UTF-8">
+    <title>Priya Bhavikatti</title>
 
-<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+    <!-- Blackletter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
 
-<style>
-body {
-    margin: 0;
-    display: flex;
-    height: 100vh;
-    font-family: sans-serif;
-    color: white;
-    background-color: black;
-}
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: sans-serif;
+            color: white;
+            background-color: black;
+        }
 
-/* LEFT SIDE */
-.left {
-    width: 50%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-}
+        /* LEFT SIDE */
+        .left {
+            width: 50%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
 
-.left img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+        .left img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-/* CLOUD SPEECH BUBBLE */
-.side-bubble {
-    position: absolute;
-    top: 20%;
-    left: 5%;
-    width: 320px;
-    padding: 28px;
-    background: white;
-    color: #09423d;
-    font-size: 18px;
-    font-weight: 500;
-    text-align: center;
-    border-radius: 60px;
-    border: 4px solid #09423d;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-    transition: all 0.3s ease;
-}
+        .credit {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: black;
+            font-family: cursive;
+            font-size: 20px;
+        }
 
-/* cloud puff shapes */
-.side-bubble::before,
-.side-bubble::after {
-    content: '';
-    position: absolute;
-    background: white;
-    border: 4px solid #09423d;
-    border-radius: 50%;
-}
+        /* RIGHT SIDE */
+        .right {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 20px;
+        }
 
-.side-bubble::before {
-    width: 60px;
-    height: 60px;
-    bottom: -30px;
-    left: 60px;
-}
+        /* CLICKABLE TITLE LINK */
+        .title-link {
+            text-decoration: none;
+        }
 
-.side-bubble::after {
-    width: 35px;
-    height: 35px;
-    bottom: -60px;
-    left: 40px;
-}
+        /* TITLE */
+        .title {
+            margin-top: 10px;
+            font-size: 72px;
+            font-family: 'UnifrakturCook', cursive;
+            letter-spacing: 3px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
 
-/* RIGHT SIDE */
-.right {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 20px;
-}
+        .title:hover {
+            color: #09423d;
+            transform: scale(1.05);
+        }
 
-/* TITLE */
-.title-link {
-    text-decoration: none;
-}
+        /* ICON GRID */
+        .icon-grid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            padding: 20px 40px 40px 40px;
+            gap: 40px;
+            justify-items: center;
+            align-items: center;
+        }
 
-.title {
-    margin-top: 10px;
-    font-size: 72px;
-    font-family: 'UnifrakturCook', cursive;
-    letter-spacing: 3px;
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
+        .icon-grid a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.title:hover {
-    color: #09423d;
-    transform: scale(1.05);
-}
+        .icon-grid img {
+            width: 180px;
+            transition: transform 0.3s ease;
+        }
 
-/* ICON GRID */
-.icon-grid {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    padding: 20px 40px 40px 40px;
-    gap: 40px;
-    justify-items: center;
-    align-items: center;
-}
+        .icon-grid img:hover {
+            transform: scale(1.15) rotate(-8deg);
+        }
 
-.icon-grid a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.icon-grid img {
-    width: 180px;
-    transition: transform 0.3s ease;
-}
-
-.icon-grid img:hover {
-    transform: scale(1.15) rotate(-8deg);
-}
-
-.credit {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: black;
-    font-family: cursive;
-    font-size: 20px;
-}
-</style>
+    </style>
 </head>
 
 <body>
 
-<!-- LEFT SIDE -->
-<div class="left">
-    <img src="https://github.com/user-attachments/assets/fb1bbf2f-24a6-4665-a752-0644968564f9" alt="Priya">
-    
-    <div id="hoverBubble" class="side-bubble">
-        Hover over an icon to learn something about me :)
+    <!-- LEFT SIDE -->
+    <div class="left">
+        <img src="https://github.com/user-attachments/assets/fb1bbf2f-24a6-4665-a752-0644968564f9" alt="Priya">
+        <div class="credit">Image credit: @artsultanov_ on Instagram</div>
     </div>
 
-    <div class="credit">Image credit: @artsultanov_ on Instagram</div>
-</div>
+    <!-- RIGHT SIDE -->
+    <div class="right">
 
-<!-- RIGHT SIDE -->
-<div class="right">
+        <!-- Clickable Title -->
+        <a href="https://www.photosbypriyab.com" target="_blank" class="title-link">
+            <div class="title">priya's place</div>
+        </a>
 
-<a href="https://www.photosbypriyab.com" target="_blank" class="title-link">
-    <div class="title">priya's place</div>
-</a>
+        <div class="icon-grid">
 
-<div class="icon-grid">
+            <!-- Football -->
+            <a href="https://codepen.io/Priya-Bhavikatti/pen/vEKMyoR" target="_blank">
+                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXkzajUzZGxxMHJpbGlwbjBrbG15YXZkYnhqZGh4bXFoenVhYzBncyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oSlhERxMw751C/giphy.gif" alt="Football">
+            </a>
 
-<!-- Football -->
-<a href="https://codepen.io/Priya-Bhavikatti/pen/vEKMyoR"
-   target="_blank"
-   onmouseover="showBubble('I am addicted to watching any and all football highlights')"
-   onmouseout="resetBubble()">
-    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXkzajUzZGxxMHJpbGlwbjBrbG15YXZkYnhqZGh4bXFoenVhYzBncyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oSlhERxMw751C/giphy.gif" alt="Football">
-</a>
+            <!-- Book -->
+            <a href="https://codepen.io/Priya-Bhavikatti/pen/dPXLvPr" target="_blank">
+                <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExajFjZndlZHA1emYxcGtyZzMxajNzOHZlbDNubzlibnFmeHgwa2tpOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/A1oBMukTqFfkoY1HiH/giphy.gif" alt="Books">
+            </a>
 
-<!-- Book -->
-<a href="https://codepen.io/Priya-Bhavikatti/pen/dPXLvPr"
-   target="_blank"
-   onmouseover="showBubble('I romanticize bookstores and collect books like trophies')"
-   onmouseout="resetBubble()">
-    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExajFjZndlZHA1emYxcGtyZzMxajNzOHZlbDNubzlibnFmeHgwa2tpOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/A1oBMukTqFfkoY1HiH/giphy.gif" alt="Books">
-</a>
+            <!-- Henna PDF -->
+            <a href="https://www.photosbypriyab.com/_files/ugd/371f3e_0d1f7fc84487458795c8870d40668d12.pdf" target="_blank">
+                <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2pmbHlmdzE2NHBrbXQxeThpMGlxc2diYmZqdzRudGdxcXZrMjVuMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6ZsTtiOVq2QDNwDC/giphy.gif" alt="Resume">
+            </a>
 
-<!-- Ocean Drive -->
-<a href="https://codepen.io/Priya-Bhavikatti/pen/dPXLgNX"
-   target="_blank"
-   onmouseover="showBubble('Late night drives + music = therapy')"
-   onmouseout="resetBubble()">
-    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmEyajVmeHpvN2V2bjQ1emN0Y3FyaThqYjFwOTB0YnBpZWQ5cmx4eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xTiN0khPhxrJgyRc6A/giphy.gif" alt="Music Playlist">
-</a>
+            <!-- Ocean Drive -->
+            <a href="https://codepen.io/Priya-Bhavikatti/pen/dPXLgNX" target="_blank">
+                <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmEyajVmeHpvN2V2bjQ1emN0Y3FyaThqYjFwOTB0YnBpZWQ5cmx4eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xTiN0khPhxrJgyRc6A/giphy.gif" alt="Music Playlist">
+            </a>
 
-</div>
-</div>
-
-<script>
-function showBubble(text) {
-    document.getElementById("hoverBubble").innerText = text;
-}
-
-function resetBubble() {
-    document.getElementById("hoverBubble").innerText = 
-    "Hover over an icon to learn something about me :)";
-}
-</script>
+        </div>
+    </div>
 
 </body>
 </html>
