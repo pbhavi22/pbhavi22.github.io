@@ -15,8 +15,6 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        cursor: none; /* Hide default cursor for fun hover effect */
-        position: relative;
     }
 
     h1 {
@@ -89,16 +87,6 @@
     .back:hover::after {
         opacity: 1;
     }
-
-    /* Smiley face for hover */
-    .smiley {
-        position: absolute;
-        font-size: 24px;
-        pointer-events: none;
-        transform: translate(-50%, -50%);
-        transition: all 0.1s ease;
-        opacity: 0;
-    }
 </style>
 </head>
 <body>
@@ -112,23 +100,6 @@
 </div>
 
 <a href="index.html" class="back">⬅</a>
-
-<!-- Smiley face element -->
-<div class="smiley" id="smiley">😊</div>
-
-<script>
-    // Track mouse movement for smiley face
-    const smiley = document.getElementById('smiley');
-    document.body.addEventListener('mousemove', (e) => {
-        smiley.style.left = e.pageX + 'px';
-        smiley.style.top = e.pageY + 'px';
-        smiley.style.opacity = 1;
-    });
-
-    document.body.addEventListener('mouseleave', () => {
-        smiley.style.opacity = 0;
-    });
-</script>
 
 </body>
 </html>
