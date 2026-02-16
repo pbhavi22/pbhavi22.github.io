@@ -41,6 +41,43 @@
             margin-top: 40px;
             font-size: 2rem;
         }
+
+        /* Back Arrow with Tooltip */
+        .back {
+            display: inline-block;
+            margin-top: 60px;
+            font-size: 36px;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.3s ease;
+            font-family: "Old Style", serif;
+            position: relative;
+        }
+
+        .back:hover {
+            transform: scale(1.2);
+        }
+
+        .back::after {
+            content: "Go back to Priya's Place!";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #064540;
+            padding: 6px 12px;
+            border-radius: 6px;
+            white-space: nowrap;
+            font-family: "Old Style", serif;
+            font-size: 16px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .back:hover::after {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -77,6 +114,9 @@
 
     <div id="score">Score: 0%</div>
 
+    <!-- Back arrow at bottom -->
+    <a href="index.html" class="back">⬅</a>
+
     <script>
         const items = document.querySelectorAll('.item');
         function toggleCheck(el) {
@@ -93,4 +133,3 @@
     </script>
 </body>
 </html>
-
