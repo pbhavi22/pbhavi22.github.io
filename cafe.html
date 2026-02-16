@@ -1,1 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Priya's Preferences</title>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #09423d;
+            font-family: "Old Standard TT", serif;
+            color: white;
+            text-align: center;
+            padding: 50px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 50px;
+        }
+
+        .cafe-outline {
+            border: 5px solid white;
+            border-radius: 20px;
+            padding: 40px 60px;
+            max-width: 500px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.05);
+        }
+
+        .menu-item {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+
+        /* Back Arrow with Tooltip */
+        .back {
+            display: inline-block;
+            margin-top: 60px;
+            font-size: 36px;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.3s ease;
+            font-family: "Old Style", serif;
+            position: relative;
+        }
+
+        .back:hover {
+            transform: scale(1.2);
+        }
+
+        .back::after {
+            content: "Go back to Priya's Place!";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #064540;
+            padding: 6px 12px;
+            border-radius: 6px;
+            white-space: nowrap;
+            font-family: "Old Style", serif;
+            font-size: 16px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .back:hover::after {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Priya's Preferences</h1>
+
+    <div class="cafe-outline">
+        <div class="menu-item">☕ Matcha Latte with no Ice, Shot of Vanilla</div>
+        <div class="menu-item">🥛 Iced Vanilla Latte with Whole Milk</div>
+        <div class="menu-item">🍓 Strawberry Matcha with Boba</div>
+    </div>
+
+    <a href="index.html" class="back">⬅</a>
+</body>
+</html>
 
