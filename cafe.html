@@ -1,89 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Priya's Preferences</title>
-    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #09423d;
-            font-family: "Old Standard TT", serif;
-            color: white;
-            text-align: center;
-            padding: 50px;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
+<meta charset="UTF-8">
+<title>Priya's Preferences</title>
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
+<style>
+    body {
+        background-color: #09423d;
+        font-family: "Old Standard TT", serif;
+        color: white;
+        text-align: center;
+        padding: 50px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        cursor: none; /* Hide default cursor for fun hover effect */
+        position: relative;
+    }
 
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 50px;
-        }
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 50px;
+        letter-spacing: 2px;
+    }
 
-        .cafe-outline {
-            border: 5px solid white;
-            border-radius: 20px;
-            padding: 40px 60px;
-            max-width: 500px;
-            margin: 0 auto;
-            background: rgba(255,255,255,0.05);
-        }
+    .cafe-outline {
+        border: 5px solid white;
+        border-radius: 20px;
+        padding: 40px 60px;
+        max-width: 500px;
+        margin: 0 auto;
+        background: rgba(255,255,255,0.05);
+        box-shadow: 0 0 30px rgba(255,255,255,0.1);
+        transition: transform 0.2s;
+    }
 
-        .menu-item {
-            font-size: 1.5rem;
-            margin: 20px 0;
-        }
+    .cafe-outline:hover {
+        transform: scale(1.02);
+    }
 
-        /* Back Arrow with Tooltip */
-        .back {
-            display: inline-block;
-            margin-top: 60px;
-            font-size: 36px;
-            text-decoration: none;
-            color: white;
-            transition: transform 0.3s ease;
-            font-family: "Old Style", serif;
-            position: relative;
-        }
+    .menu-item {
+        font-size: 1.6rem;
+        margin: 25px 0;
+        padding: 10px 0;
+        border-bottom: 1px dashed rgba(255,255,255,0.3);
+        transition: color 0.3s, transform 0.2s;
+    }
 
-        .back:hover {
-            transform: scale(1.2);
-        }
+    .menu-item:hover {
+        color: #ffd700;
+        transform: scale(1.05);
+    }
 
-        .back::after {
-            content: "Go back to Priya's Place!";
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #064540;
-            padding: 6px 12px;
-            border-radius: 6px;
-            white-space: nowrap;
-            font-family: "Old Style", serif;
-            font-size: 16px;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-        }
+    /* Back Arrow with Tooltip */
+    .back {
+        display: inline-block;
+        margin-top: 60px;
+        font-size: 36px;
+        text-decoration: none;
+        color: white;
+        transition: transform 0.3s ease;
+        font-family: "Old Style", serif;
+        position: relative;
+    }
 
-        .back:hover::after {
-            opacity: 1;
-        }
-    </style>
+    .back:hover {
+        transform: scale(1.2);
+    }
+
+    .back::after {
+        content: "Go back to Priya's Place!";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #064540;
+        padding: 6px 12px;
+        border-radius: 6px;
+        white-space: nowrap;
+        font-family: "Old Style", serif;
+        font-size: 16px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .back:hover::after {
+        opacity: 1;
+    }
+
+    /* Smiley face for hover */
+    .smiley {
+        position: absolute;
+        font-size: 24px;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        transition: all 0.1s ease;
+        opacity: 0;
+    }
+</style>
 </head>
 <body>
-    <h1>Priya's Preferences</h1>
 
-    <div class="cafe-outline">
-        <div class="menu-item"> Iced Matcha Latte with Shot of Vanilla</div>
-        <div class="menu-item"> Strawberry Matcha Latte with Boba</div>
-        <div class="menu-item"> Iced Vanilla Latte with Whole Milk</div>
-    </div>
+<h1>Priya's Preferences</h1>
 
-    <a href="index.html" class="back">⬅</a>
+<div class="cafe-outline">
+    <div class="menu-item">☕ Iced Matcha Latte with Shot of Vanilla</div>
+    <div class="menu-item">🥛 Iced Vanilla Latte with Whole Milk</div>
+    <div class="menu-item">🍓 Strawberry Matcha Latte with Boba</div>
+</div>
+
+<a href="index.html" class="back">⬅</a>
+
+<!-- Smiley face element -->
+<div class="smiley" id="smiley">😊</div>
+
+<script>
+    // Track mouse movement for smiley face
+    const smiley = document.getElementById('smiley');
+    document.body.addEventListener('mousemove', (e) => {
+        smiley.style.left = e.pageX + 'px';
+        smiley.style.top = e.pageY + 'px';
+        smiley.style.opacity = 1;
+    });
+
+    document.body.addEventListener('mouseleave', () => {
+        smiley.style.opacity = 0;
+    });
+</script>
+
 </body>
 </html>
-
