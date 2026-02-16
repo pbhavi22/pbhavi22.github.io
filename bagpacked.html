@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Priya's Pack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #09423d;
+            font-family: 'Old Standard TT', serif;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 50px;
+        }
+
+        .item {
+            display: inline-block;
+            margin: 20px;
+            cursor: pointer;
+        }
+
+        .item img {
+            width: 100px;
+            height: 100px;
+            border: 3px solid white;
+            border-radius: 10px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .item.checked img {
+            border-color: #ffd700;
+            transform: scale(1.1);
+        }
+
+        #score {
+            margin-top: 40px;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Priya's Pack</h1>
+
+    <div class="item" onclick="toggleCheck(this)">
+        <img src="https://cdn.shopify.com/s/files/1/0639/9292/2365/files/97218_110000328_US_JER_UH_32oz_FINAL_FOP.png?v=1735651800" alt="Lotion">
+        <p>Lotion</p>
+    </div>
+    <div class="item" onclick="toggleCheck(this)">
+        <img src="https://cdn.cs.1worldsync.com/syndication/mediaserverredirect/aa866e820b60a80def1df6ce53d5cf22/width(400).png" alt="Aquaphor">
+        <p>Aquaphor</p>
+    </div>
+    <div class="item" onclick="toggleCheck(this)">
+        <img src="https://p7.hiclipart.com/preview/909/921/154/glasses-case-clothing-accessories-bag-lens-glasses-case.jpg" alt="Glasses">
+        <p>Glasses</p>
+    </div>
+    <div class="item" onclick="toggleCheck(this)">
+        <img src="https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fwww.elfcosmetics.com%2Fglow-reviver-plumping-lip-oil%2F300255.html%3Fsrsltid%3DAfmBOoq1TWMBVAbOv39DgX-VLHL5BwPRrpcMyjSZfZhmy5z_Jb3N5HCO&ved=0CBYQjRxqFwoTCNDGjbjr3JIDFQAAAAAdAAAAABAI&opi=89978449" alt="Elf Lip Gloss">
+        <p>Elf Lip Gloss</p>
+    </div>
+    <div class="item" onclick="toggleCheck(this)">
+        <img src="https://freepngimg.com/save/21624-sony-digital-camera-transparent-background/500x400" alt="Camera">
+        <p>Camera</p>
+    </div>
+    <div class="item" onclick="toggleCheck(this)">
+        <img src="https://p7.hiclipart.com/preview/70/904/1015/iphone-x-iphone-8-smartphone-apple-ios-11-smartphone.jpg" alt="Phone">
+        <p>Phone</p>
+    </div>
+    <div class="item" onclick="toggleCheck(this)">
+        <img src="https://i5.walmartimages.com/asr/295b57c0-d331-43d2-82cf-029f6d202c95.547a9af436cc4a35b768454d9b9fbc6d.png?odnHeight=768&odnWidth=768&odnBg=FFFFFF" alt="Water">
+        <p>Water</p>
+    </div>
+
+    <div id="score">Score: 0%</div>
+
+    <script>
+        const items = document.querySelectorAll('.item');
+        function toggleCheck(el) {
+            el.classList.toggle('checked');
+            updateScore();
+        }
+
+        function updateScore() {
+            const total = items.length;
+            const checked = document.querySelectorAll('.item.checked').length;
+            const percent = Math.round((checked / total) * 100);
+            document.getElementById('score').textContent = `Score: ${percent}%`;
+        }
+    </script>
+</body>
+</html>
 
